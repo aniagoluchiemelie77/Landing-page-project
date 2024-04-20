@@ -3,17 +3,74 @@
 *::before{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: inherit; 
 }
-body{
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+.container{
     font-family: "inter", sans-serif;
     font-weight: 400;
-    font-size: 62.5%;
-    line-height: 1.5;
+    line-height: 1.0;
     color: black;
     background-color: white;
     padding: 1.5rem;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-rows: 10vh 65vw repeat(7, min-content);
+    grid-template-columns: 1fr [navstart] repeat(8, minmax(min-content, 14rem)) [navend] 1fr;
 }
+.navigation{ 
+    background-color: black;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec1{
+    background-color: gold;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec2{
+    background-color: greenyellow;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec3{
+    background-color: red;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec4{
+    background-color: royalblue;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec5{
+    background-color: purple;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec6{
+    background-color: skyblue;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec7{
+    background-color: peachpuff;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec8{
+    background-color: grey;
+    padding: 1.5rem;
+    grid-column: navstart / navend;
+}
+.sec8__div1__div2{
+    grid-column: 6 / -1;
+    grid-row: 9 / 10;
+}
+/*
 .header{
     height: 10vh;
     position: relative; 
@@ -540,7 +597,7 @@ h3{
     background-color: white;
     margin-right: .5rem;
 }
-/* FADING DESIGN FOR DIV MBU  */
+/* FADING DESIGN FOR DIV MBU  *//*
 .sec7-d1{
     background-image: linear-gradient(to right, #E4E8FB, #E7E1FD);
     border-radius: 8rem;
@@ -578,7 +635,7 @@ h3{
     border-radius: 2rem;
     transform: translateY(-5.8rem);
 }
-/* FADING DESIGN FOR DIV ABUO*/
+
 .sec7-d4{
     border-radius: 3rem;
     color: transparent;
@@ -1170,5 +1227,5 @@ h4{
     }
 }
 
-
+*/
 
