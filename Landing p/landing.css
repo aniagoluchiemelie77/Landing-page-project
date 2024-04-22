@@ -16,91 +16,283 @@ html{
     color: black;
     background-color: white;
     padding: 1.5rem;
-    margin: 1rem auto;
-    display: grid;
-    grid-template-rows: 10vh 65vw repeat(7, min-content);
-    grid-template-columns: 1fr [navstart] repeat(8, minmax(min-content, 14rem)) [navend] 1fr;
+    margin: 0.1rem auto;
+    display: flex;
+    flex-direction: column;
+    
 }
 .navigation{ 
-    background-color: black;
-    padding: 1.5rem;
-    grid-column: navstart / navend;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.9rem;
+    column-gap: 2rem;
+    min-height: 14vh;
+    margin-top: 0.5rem;
 }
 .sec1{
-    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.5rem;
-    grid-column: navstart / navend;
+    min-height: 76vh;
 }
 .sec2{
-    background-color: greenyellow;
-    padding: 1.5rem;
-    grid-column: navstart / navend;
+    background-color: #1C1232;
+    display: grid;
+    margin-top: 1rem;
+    min-height: 75vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: .5rem;
+    border-radius: 2%;
 }
 .sec3{
-    background-color: red;
     padding: 1.5rem;
-    grid-column: navstart / navend;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: .5rem;
+    border-radius: 2%;
+    margin-top: 1rem;
+    min-height: 80vh;
+} 
 .sec4{
-    background-color: royalblue;
-    padding: 1.5rem;
-    grid-column: navstart / navend;
+    margin-top: 1rem;
+    min-height: 40vh;
+    border-radius: 2%;
 }
 .sec5{
     background-color: purple;
     padding: 1.5rem;
-    grid-column: navstart / navend;
 }
 .sec6{
     background-color: skyblue;
     padding: 1.5rem;
-    grid-column: navstart / navend;
 }
 .sec7{
     background-color: peachpuff;
     padding: 1.5rem;
-    grid-column: navstart / navend;
 }
 .sec8{
     background-color: grey;
     padding: 1.5rem;
-    grid-column: navstart / navend;
+}
+.sec2__firstrow__div1{
+   padding: 2rem;
+   grid-area:  1 / 1 / -1 / 3;
+}
+.sec2__firstrow__div2 {
+    object-fit: contain;
+    grid-area:  1 / 3 / -1 / -1;
+}
+.sec3__firstrow__div1{
+    grid-area:  1 / 1 / -1 / 3;
+    background-image: url('img/landingpg1.png');
+    background-size: contain;
+    border-radius: 3rem;
+}
+.sec3__firstrow__div2{
+    grid-area:  1 / 3 / -1 / -1;
+    padding: 2rem;
+    background-color: #FAFAFA;
+    border-radius: 2rem;
+}
+.sec4__div1{
+    grid-area:  1 / 5 / 2 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+.sec4__div2{
+    grid-area:  2 / 4 / 3 / 6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.9rem;
+}
+.sec4__div3{
+    grid-area:  3 / 2 / -1 / 8;
+}
+.sec5__div1__div1{
+
+}
+.sec5__div1__div2{
+
+}
+.sec7__div__div1{
+
+}
+.sec7__div__div2{
+
+}
+.sec8__div1__div1{
+
 }
 .sec8__div1__div2{
-    grid-column: 6 / -1;
-    grid-row: 9 / 10;
+
 }
-/*
-.header{
-    height: 10vh;
-    position: relative; 
+.btn:link, 
+.btn:visited {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 4rem;
+    transition: all .2s;
+    position: relative;
+}
+.btn:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+}
+.btn:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+.btn-blue{
+    background-color: #8858F1;
+    color: white;
+
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
     width: 100%;
-    text-align: center;
-    padding-bottom: 3rem;
+    border-radius: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .2s;
 }
-.header_links .btn{
-    float: right;
-    margin-right: 5rem;
+.btn-blue::after{
+    background-color: #8858F1;
 }
-.header .link1 .link2{
+.btn:hover::after{
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
 }
-.header_logo-box{
-}
-.logo-box{
-}
-.logo{
-  }
-.ls{
-    font-size: 1.4rem;
-    font-weight: 550;
+.btn-animated{
+    animation: mvbottom .2s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 a{
     text-decoration: none;
-    font-size: .7rem;
+    font-size: 1.2rem;
     color: black;
     font-weight: 500;
-    padding-left: 2rem;
     padding-left: 3rem;
+    margin-left: 1rem;
+}
+.sec1__heading__header{
+    font-size: 3.4rem;
+    padding-bottom: 3rem;
+    max-width: 40vw;
+}
+.sec1__heading__header span{
+    display: inline-block;
+    background-image: linear-gradient(to right, #8D5CFA, #788CEB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.row--heading2{
+    font-size: 2.9rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #798BEC, #8965F7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.paragraph{
+    color: white;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+.paragraph .first{
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+.paragraph .second{
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+.paragraph .third{
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+.paragraph .fourth{
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: .1rem;
+}
+.sec2__firstrow__div1 .lists{
+    padding: 1.8rem;
+    color: white;
+}
+.lists li{
+    padding-bottom: 1.2rem;
+    padding-left: 1rem;
+    list-style-type: circle;
+    font-size: 1.2rem;
+    list-style-image: linear-gradient(to right, #798BEC, #8965F7);
+}
+.row-heading{
+    font-size: 2.9rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #8D5CFA, #788CEB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 650;
+    padding-bottom: 1rem;
+}
+.sec3__firstrow__div2 p{
+    color: black;
+}
+.sec3__firstrow__div2 .paragraph__first{
+    display: block;
+    padding-bottom: 1.7rem;
+}
+.sec3__firstrow__div2 .paragraph__second{
+    display: block;
+    padding-bottom: 1.6rem;
+}
+.sec3__firstrow__div2 .paragraph__third{
+    display: block;
+    padding-bottom: 1.6rem;
+    padding-top: 1.7rem;
+}
+.sec4__div3 div{
+    display: inline;
+}
+.sec4__div1__secondcol__div1{
+    background-color: #E6E4FC;
+    border-radius: 10rem;
+    color: transparent;
+}
+.sec4__div2__secondcol__div2{
+    background-color: #B4B0F7;
+    border-radius: 9rem;
+}
+.sec4__div3__secondcol__div3{
+    border-radius: 2rem;
+    background-image: linear-gradient(to top right, #788CEB, #866BF5);
+}
+.sec4__div3__secondcol__div3 p{
+    color: black;
+}
+/*
+.header_logo-box{
+}
+.ls{
+    font-size: 1.4rem;
+    font-weight: 550;
 }
 .heading1{
     font-size: 3rem;
@@ -274,31 +466,6 @@ section{
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
-.row--heading2{
-    font-size: 1.8rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, #798BEC, #8965F7);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.para span {
-    display: block;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
-}
-ul{
-    list-style-type: circle;
-    list-style-image: linear-gradient(to right, #798BEC, #8965F7);
-}
-ul li{
-    margin-left: 1rem;
-    padding-left: .5rem;
-    padding-top: 1.2rem;   
-}
-.sec3{
-    background-color: #FFFFFF;
-}
 .thirdrow{
     max-width: 114rem;
     margin: 0 auto;
@@ -359,11 +526,6 @@ h3{
     padding-bottom: 2.5rem;
     background-color: white;
 }
-.sec4::after{
-    content: "";
-    display: table;
-    clear: both;
-}
 .firstcol{
     width: calc((100% - 15rem) / 2);
     background-color: white;
@@ -389,24 +551,16 @@ h3{
     background-color: #E6E4FC;
     border-radius: 10rem;
     color: transparent;
-    margin-top: .5rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
 }
 .sec4-div2{
     background-color: #B4B0F7;
     border-radius: 9rem;
     color: transparent;
-    margin-right: 2.6rem;
-    margin-left: 2.6rem;
-    transform: translateY(-1rem);
 }
 .sec4-div3{
     border-radius: 2rem;
     background-image: linear-gradient(to top right, #788CEB, #866BF5);
     color: white;
-    padding-left: 2rem;
-    transform: translateY(-1.9rem);
 }
 .sec4-shape{
     background-image: url('img/lndng3.png');
