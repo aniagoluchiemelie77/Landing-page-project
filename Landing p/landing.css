@@ -49,12 +49,12 @@ html{
 .sec3{
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: .5fr .5fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .6fr .6fr;
     column-gap: .5rem;
     border-radius: 2%;
     margin-top: 1rem;
-    min-height: 80vh;
+    min-height: 60vh;
 } 
 .sec4{
     display: grid;
@@ -98,19 +98,19 @@ html{
     object-fit: contain;
     grid-area:  1 / 3 / -1 / -1;
 }
-.sec3__firstrow__div1{
+.sec3__picture{
     grid-area:  1 / 1 / -1 / 3;
-    background-image: url('img/landingpg1.png');
-    background-size: contain;
-    text-align: center;
-    border-radius: 3rem;
     background-repeat: no-repeat;
+    border-radius: 2rem;
 }
 .sec3__firstrow__div2{
     grid-area:  1 / 3 / -1 / -1;
     padding: 2rem;
     background-color: #FAFAFA;
     border-radius: 2rem;
+}
+.sec3__firstrow__div2 a{
+    margin-top: .5rem;
 }
 .sec4__div1{
     grid-area:  1 / 2 / 2 / -1;
@@ -128,7 +128,8 @@ html{
     min-height: 20vh;
     padding: 1rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    align-items: center;
 }
 .sec5__div1__div1{
     grid-area: 1 / 1 / -1 / 2;
@@ -319,6 +320,8 @@ a{
 }
 .sec3__firstrow__div2 p{
     color: black;
+    padding-top: 1.5rem;
+    max-width: 50rem;
 }
 .sec3__firstrow__div2 .paragraph__first{
     display: block;
@@ -383,17 +386,26 @@ a{
 }
 .sec4__div3__secondcol__div3 p{
     color: black;
-
 }
-.sec4__div3__picture1{
-    width: 170rem; 
-    height: 110rem;
-    object-fit: cover;
+.sec4__div3 div{
+    padding-left: 1rem;
+}
+.sec4__div3__pic1{
+    width: 15%;
+}
+.sec4__div3__pic2{
+    width: 15%;
+}
+.sec4__div3__pic3{
+    width: 15%;
+}
+.sec4__div3__pic4{
+    width: 15%;
 }
 .sec4__div1__secondcol__div3--picture{
-    background-image: url('img/lndng1.png');
-    width: 7rem;
-    height: 7rem;
+    overflow: hidden;
+    width: 8rem;
+    height: 8rem;
     border: .2rem solid white;
     border-radius: 50%;
 }
@@ -460,9 +472,9 @@ a{
 }
 
 .thirddiv__picture{
-    background-image: url('img/lndng1.png');
-    width: 7rem;
-    height: 7rem;
+    overflow: hidden;
+    width: 8rem;
+    height: 8rem;
     border: .2rem solid white;
     border-radius: 50%;
 }
@@ -526,9 +538,9 @@ a{
     min-height: 30vh;
 }
 .divthree__picture{
-    background-image: url('img/lndng1.png');
-    width: 7rem;
-    height: 7rem;
+    overflow: hidden;
+    width: 8rem;
+    height: 8rem;
     border: .2rem solid white;
     border-radius: 50%;
 }
@@ -625,7 +637,7 @@ tbody tr:nth-child(odd){
     list-style: none;
     background: url('img/tick (2).jpg') left center no-repeat;  
 }
-@media (max-width: 60rem){
+@media (max-width: 40rem){
     body{
         padding: 0;
     }
@@ -888,6 +900,246 @@ tbody tr:nth-child(odd){
      .thirddiv p{
          padding-left: 1rem;
          max-width: 60vw;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .thirddiv span{
+        font-weight: 750;
+        font-size: 2rem;
+        padding-top: 2rem;
+     }
+     table{
+         padding-bottom: 2rem;
+     }
+     th, td{
+         padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 520;
+     }
+     tbody tr:nth-child(odd){
+         background-color: #EDEFF7;
+     }
+     .header{
+         font-size: 3rem;
+         font-weight: 790;
+     }
+     .sec8 h4{
+         padding: 1.6rem;
+     }
+     .header1{
+         font-size: 2.4rem;
+         padding-bottom: 1rem;
+     }
+     .sec8 ul li{
+         padding-left: 3.2rem;
+         font-size: 1.9rem;
+         font-weight: 500;  
+     }
+     .btn:link, 
+     .btn:visited {
+        font-weight: 510;
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (min-width: 40rem) and (max-width: 56rem) {
+    .navigation{ 
+        min-height: 5vh;
+    }
+    .sec1{
+        min-height: 40vh;
+    }
+    .sec2{
+        min-height: 50vh;
+    }
+    .sec3{
+        row-gap: 1rem;
+    }
+    .sec4{
+        margin-bottom: 1rem;
+    }
+    .sec5{
+        row-gap: .2rem;
+    }
+    .sec6{
+        min-height: 40vh;
+    }
+    .sec8{
+        row-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows:  repeat(4, min-content);
+    }
+     .sec3__firstrow__div1{
+        grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec3__firstrow__div2{
+         padding: 2rem;
+         grid-area: 2 / 1 / -1 / -1;
+     }
+     .sec4__div1{
+         padding: 0;
+         grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec4__div3{
+         min-height: 20vh;
+         padding: 0;
+     }
+     .sec5__div1__div1{
+         row-gap: 1rem;
+         padding: 1.2rem;
+         grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec5__div1__div2{
+        grid-area: 2 / 1 / -1 / -1;
+        padding: 1rem;
+     }
+     .sec7__div__div1{
+        grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec7__div__div2{
+        grid-area: 2 / 1 / -1 / -1;
+     }
+     .section__header{
+        grid-area: 1 / 1 / 2/ -1;
+        padding: 1.8rem;
+     }
+     .sec8__div1__div1{
+         padding: 1.8rem;
+         grid-area: 2 / 1 / 3 / -1;
+     }
+     .sec8__div1__div2{
+         padding: 1.8rem;
+         grid-area: 3 / 1 / 4 / -1;
+     }
+     .sec8__footer{
+         padding: 1.9rem;
+         grid-area: 4 / 1 / -1 / -1;
+     }
+     a{
+         font-size: 1.9rem;
+         padding-left: .6rem;
+     }
+     .sec1__heading__header{
+         font-size: 3.5rem;
+         max-width: 80vw;
+     }
+     .row--heading2{
+         font-size: 3rem;
+         padding: 1rem;
+     }
+     .paragraph{
+         font-size: 1.9rem;
+         padding: 1.3rem;
+         font-weight: 500;
+     }
+     .paragraph .fourth{
+         display: block;
+         padding-top: 1rem;
+         padding-bottom: .1rem;
+     }
+      .sec2lists{
+         padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .row-heading{
+         font-size: 3rem;
+     }
+     .sec4__div1__secondcol__div3{
+         padding: 2rem;
+         min-height: 20vh;
+     }
+     .sec4__div1__secondcol__div3--paragraph{
+         padding-left: 2.5rem;
+         max-width: 70vw;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .sec4__div1__secondcol__div3--paragraph span{
+         font-weight: 750;
+         padding-top: 2rem;
+         font-size: 2rem;
+     }
+     .sec4__div1__secondcol__div3--picture{
+         width: 8rem;
+         height: 8rem;
+     }
+     .sec5__div1__div1--body{
+        display: unset;
+     }
+     .sec5__div1__subdiv1{
+        display: none;
+     }
+     .sec5__div1__subdiv2 p{
+         padding: 1.4rem;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .sec5__div1__div1{
+        grid-template-columns: .5fr .5fr ;
+        grid-template-rows:  repeat(3, min-content);
+        row-gap: 1rem;
+        padding: 1rem;
+    }
+     .sec5__div1__div1__footer{
+        padding: 1rem;
+        grid-area: 3 / 1 / -1 / -1;
+     }
+     .sec5__div1__div2__subdiv3{
+         padding: 2rem;
+     }
+     .sec5__div1__div2__subdiv3 span{
+         font-weight: 750;
+         padding-top: 2rem;
+         font-size: 2rem;
+     }
+     .sec5__div1__div2__subdiv3 p {
+         padding-left: 1.7rem;
+         max-width: 70vw;
+         font-size: 1.9rem;
+         font-weight: 500;
+         line-height: 1.4;
+     }
+     .thirddiv__picture{
+        width: 8rem;
+        height: 8rem;
+     }
+     .sec6__div{
+         padding: 1.5rem;
+         max-width: 89vw;
+     }
+     .sec6 h4{
+         font-size: 3rem;
+         font-weight: 790;
+     }
+     .sec6 ul li{
+         padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .divthree{
+         padding: 1.5rem;
+     }
+     .divthree__picture{
+         width: 8rem;
+         height: 8rem;
+     }
+     .divthree p{
+         padding-left: 1.9rem;
+         max-width: 70vw;
+         font-size: 1.9rem;
+         font-weight: 500;
+     }
+     .divthree span{
+         font-weight: 750;
+         font-size: 2rem;
+         padding-top: 2rem;
+     }
+     .thirddiv{
+         padding: 1.5rem;
+     }
+     .thirddiv p{
+         padding-left: 1.9rem;
+         max-width: 70vw;
          font-size: 1.9rem;
          font-weight: 500;
      }
