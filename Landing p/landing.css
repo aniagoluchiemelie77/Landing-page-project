@@ -49,7 +49,7 @@ html{
 .sec3{
     padding: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: .5fr .5fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: .5rem;
     border-radius: 2%;
@@ -102,7 +102,9 @@ html{
     grid-area:  1 / 1 / -1 / 3;
     background-image: url('img/landingpg1.png');
     background-size: contain;
+    text-align: center;
     border-radius: 3rem;
+    background-repeat: no-repeat;
 }
 .sec3__firstrow__div2{
     grid-area:  1 / 3 / -1 / -1;
@@ -294,11 +296,11 @@ a{
     padding-top: 1rem;
     padding-bottom: .1rem;
 }
-.sec2__firstrow__div1 .lists{
+.sec2__firstrow__div1 .sec2lists{
     padding: 1.8rem;
     color: white;
 }
-.lists li{
+.sec2lists li{
     padding-bottom: 1.2rem;
     padding-left: 1rem;
     list-style-type: circle;
@@ -412,6 +414,7 @@ a{
 }
 .sec5__div1__div1__footer{
     grid-area: 3 / 1 / -1 / -1;
+    width: 100%;
 }
 .sec5__div1__subdiv2{
     padding-bottom: 1rem;
@@ -613,10 +616,14 @@ tbody tr:nth-child(odd){
     padding-bottom: 1rem;
 }
 .sec8 ul{
-    padding-bottom: 1.2rem;
+    padding: 1rem;
 }
 .sec8 ul li{
-    padding: .7rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    list-style: none;
+    background: url('img/tick (2).jpg') left center no-repeat;  
 }
 @media (max-width: 60rem){
     body{
@@ -624,7 +631,7 @@ tbody tr:nth-child(odd){
     }
     .container{
         font-size: 60%;
-        font-weight: 700;
+        font-weight: 600;
         padding: 0;
         margin: 0;
     }
@@ -633,59 +640,93 @@ tbody tr:nth-child(odd){
         column-gap: 2rem;
         margin-top: 0;
         min-height: 9vh;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin: 1rem;
     }
     .sec1{
         padding: 1rem;
         min-height: 50vh;
     }
     .sec2{
-        margin-top: 0;
+        margin-left: .5rem;
         padding: 1rem;
         min-height: 50vh;
         line-height: 1.5;
+        grid-template-columns: 0;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 0;
+        margin-right: .5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .sec3{
         padding: 1rem;
-        column-gap: .1rem;
+        column-gap: 0;
+        row-gap: 1rem;
         margin-top: 0;
-        min-height: 50vh;
+        min-height: 30vh;
         line-height: 1.5;
+        margin-left: 1rem;
+        margin-right: 1rem;
     } 
     .sec4{
         padding: 1rem;
         line-height: 1.5;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .sec5{
         padding: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, min-content);
         min-height: 30vh;
         line-height: 1.5;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .sec6{
         padding: 1rem;
         line-height: 1.5;
         min-height: 50vh;
         border-radius: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .sec7{
         padding: .2rem;
         min-height: 30vh;
-        column-gap: 1.5rem;
+        column-gap: 0;
+        row-gap: 1rem;
+        grid-template-rows: repeat(2, min-content);
         line-height: 1.5;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     .sec8{
         padding: 0;
-        column-gap: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        column-gap: 0;
         line-height: 1.5;
-        grid-template-rows: min-content repeat(2, 1fr) min-content;
+        row-gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows:  repeat(4, min-content);
     }
     .sec2__firstrow__div1{
         padding: .5rem;
+        grid-row-start: 1;
+        grid-row-end: -1;
      }
      .sec2__firstrow__div2 {
-         object-fit: contain;
+         display: none;
+     }
+     .sec3__firstrow__div1{
+        grid-area: 1 / 1 / 2 / -1;
      }
      .sec3__firstrow__div2{
-         padding: .8rem;
+         padding: 1.8rem;
+         grid-area: 2 / 1 / -1 / -1;
      }
      .sec4__div1{
          padding: 0;
@@ -697,534 +738,197 @@ tbody tr:nth-child(odd){
      }
      .sec5__div1__div1{
          row-gap: 0;
+         padding: 1.2rem;
+         grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec5__div1__div2{
+        grid-area: 2 / 1 / -1 / -1;
+     }
+     .sec7__div__div1{
+        grid-area: 1 / 1 / 2 / -1;
+     }
+     .sec7__div__div2{
+        grid-area: 2 / 1 / -1 / -1;
+     }
+     .section__header{
+        grid-area: 1 / 1 / 2/ -1;
+        padding: 1.8rem;
      }
      .sec8__div1__div1{
-         padding: 1rem;
+         padding: 1.8rem;
+         grid-area: 2 / 1 / 3 / -1;
      }
      .sec8__div1__div2{
-         padding: 1rem;
+         padding: 1.8rem;
+         grid-area: 3 / 1 / 4 / -1;
      }
      .sec8__footer{
-         padding: 1.5rem;
+         padding: 1.9rem;
+         grid-area: 4 / 1 / -1 / -1;
      }
      a{
-         font-size: 1rem;
-         padding-left: 1rem;
+         font-size: 1.9rem;
+         padding-left: .6rem;
      }
      .sec1__heading__header{
-         font-size: 3rem;
-         padding-bottom: 2rem;
-         max-width: 60vw;
+         font-size: 3.5rem;
+         max-width: 80vw;
      }
      .row--heading2{
-         font-size: 2rem;
+         font-size: 3rem;
+         padding: 1rem;
      }
      .paragraph{
-         color: white;
-         font-size: 2rem;
+         font-size: 1.9rem;
          padding: 1.3rem;
+         font-weight: 500;
      }
      .paragraph .fourth{
          display: block;
          padding-top: 1rem;
          padding-bottom: .1rem;
      }
-     .sec2__firstrow__div1 .lists{
-         padding: 1.8rem;
-     }
-     .lists li{
-         padding-bottom: 1.2rem;
-         padding-left: 1rem;
-         font-size: 1.2rem;
+      .sec2lists{
+         padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
      .row-heading{
-         font-size: 2.5rem;
+         font-size: 3rem;
      }
      .sec4__div1__secondcol__div3{
          padding: 1.5rem;
          min-height: 20vh;
      }
      .sec4__div1__secondcol__div3--paragraph{
-         padding-left: 1.8rem;
-         max-width: 60vw;
+         padding-left: 2rem;
+         max-width: 65vw;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
      .sec4__div1__secondcol__div3--paragraph span{
-         display: block;
-         font-weight: 700;
-         padding-top: 1.6rem;
+         font-weight: 750;
+         padding-top: 2rem;
+         font-size: 2rem;
      }
      .sec4__div1__secondcol__div3--picture{
-         width: 7rem;
-         height: 7rem;
+         width: 9rem;
+         height: 8rem;
      }
-     .sec5__div1__div1 h4{
-         grid-area: 1 / 1 / 2 / -1;
-     }
-     .sec5__div1__subdiv2 p{
-         padding-top: 1.4rem;
-         padding-left: 1rem;
-         font-size: 1.2rem;
-     }
-     .sec5__div1__div1__footer{
-         grid-area: 3 / 1 / -1 / -1;
-     }
-     .sec5__div1__subdiv2{
-         padding-bottom: 1rem;
+     .sec5__div1__div1--body{
+        display: unset;
      }
      .sec5__div1__subdiv1{
-         padding-top: 1rem;
+        display: none;
      }
-     .mgphone{
-         color: #7F7DF0;
+     .sec5__div1__subdiv2 p{
+         padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
-     .sec5__div1__div2__subdiv1{
-         margin-left: 4rem;
-         margin-right: 4rem;
-         background-color: #E6E4FC;
-         transform: scale(3rem);
-         color: transparent;
-         border-radius: 10rem;
-     }
-     .sec5__div1__div2__subdiv2{
-        margin-right: 2.3rem;
-        margin-left: 2.3rem;
-        z-index: 50;
-        background-color: #B4B0F7;
-        color: transparent;
-        transform: translateY(-.7rem);
-        border-radius: 6rem;
+     .sec5__div1__div1{
+        grid-template-columns: .5fr .5fr ;
+        grid-template-rows:  repeat(3, min-content);
+        row-gap: 0;
+        padding: 1rem;
+    }
+     .sec5__div1__div1__footer{
+        padding: 1rem;
+        grid-area: 3 / 1 / -1 / -1;
      }
      .sec5__div1__div2__subdiv3{
-         z-index: 100;
-         background-image: linear-gradient(to top right, #788CEB, #866BF5);
-         border-radius: 2rem;
-         transform: translateY(-1.3rem);
-         padding-top: 2rem;
-         color: white;
-         padding: 1.5rem;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         min-height: 25vh;
-     }
-     .sec5__div1__div2__subdiv3 div{
-         object-fit: cover;
-     }
-     
-     .thirddiv__picture{
-         background-image: url('img/lndng1.png');
-         width: 7rem;
-         height: 7rem;
-         border: .2rem solid white;
-         border-radius: 50%;
+         padding: 2rem;
      }
      .sec5__div1__div2__subdiv3 span{
-         display: block;
-         font-weight: 650;
-         padding-top: 1.2rem;
+         font-weight: 750;
+         padding-top: 2rem;
+         font-size: 2rem;
      }
      .sec5__div1__div2__subdiv3 p {
-         padding-left: 1rem;
-         max-width: 33vw;
+         padding-left: 1.5rem;
+         max-width: 60vw;
+         font-size: 1.9rem;
+         font-weight: 500;
+         line-height: 1.4;
      }
      .sec6__div{
          padding: 1.5rem;
-         max-width: 69vw;
-     }
-     .sec6 ul{
-         font-size: 1.3rem;
-         padding-top: 1.5rem;
-         padding-left: .5rem;
-         padding-bottom: 2rem;
+         max-width: 89vw;
      }
      .sec6 h4{
-         font-size: 2rem;
+         font-size: 3rem;
+         font-weight: 790;
      }
      .sec6 ul li{
          padding-top: .8rem;
-         list-style-type: circle;
-         font-size: 1.2rem;
-         padding-left: 1rem;
-         list-style-image: linear-gradient(to right, #798BEC, #8965F7);
-     }
-     .divone{
-         margin-left: 4rem;
-         margin-right: 4rem;
-         background-color: #E6E4FC;
-         transform: scale(3rem);
-         color: transparent;
-         border-radius: 10rem;
-     }
-     .divtwo{
-         margin-right: 2.3rem;
-        margin-left: 2.3rem;
-        z-index: 50;
-        background-color: #B4B0F7;
-        color: transparent;
-        transform: translateY(-1.2rem);
-        border-radius: 6rem;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
      .divthree{
-         z-index: 100;
-         background-image: linear-gradient(to top right, #788CEB, #866BF5);
-         border-radius: 2rem;
-         transform: translateY(-2.2rem);
-         padding-top: 2rem;
-         color: white;
          padding: 1.5rem;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         min-height: 30vh;
      }
      .divthree__picture{
-         background-image: url('img/lndng1.png');
-         width: 7rem;
-         height: 7rem;
-         border: .2rem solid white;
-         border-radius: 50%;
+         width: 9rem;
+         height: 9rem;
      }
      .divthree p{
          padding-left: 1rem;
-         max-width: 33vw;
+         max-width: 62vw;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
      .divthree span{
-         display: block;
-         font-weight: 650;
-         padding-top: 1.2rem;
-     }
-     .firstdiv{
-         margin-left: 4rem;
-         margin-right: 4rem;
-         background-color: #E6E4FC;
-         transform: scale(3rem);
-         color: transparent;
-         border-radius: 10rem;
-     }
-     .seconddiv{
-         margin-right: 2.3rem;
-        margin-left: 2.3rem;
-        z-index: 50;
-        background-color: #B4B0F7;
-        color: transparent;
-        transform: translateY(-1.2rem);
-        border-radius: 6rem;
+         font-weight: 750;
+         font-size: 2rem;
+         padding-top: 2rem;
      }
      .thirddiv{
-         z-index: 100;
-         background-image: linear-gradient(to top right, #788CEB, #866BF5);
-         border-radius: 2rem;
-         transform: translateY(-2.2rem);
-         padding-top: 2rem;
-         color: white;
          padding: 1.5rem;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         min-height: 30vh;
      }
      .thirddiv p{
          padding-left: 1rem;
-         max-width: 33vw;
+         max-width: 60vw;
+         font-size: 1.9rem;
+         font-weight: 500;
      }
      .thirddiv span{
-         display: block;
-         font-weight: 650;
-         padding-top: 1.2rem;
-     }
-     .section__header{
-         grid-area: 1 / 1 / 2 / -1;
+        font-weight: 750;
+        font-size: 2rem;
+        padding-top: 2rem;
      }
      table{
-         padding-top: 2rem;
-         padding-bottom: 1rem;
-         table-layout: fixed;
+         padding-bottom: 2rem;
      }
      th, td{
          padding: 1rem;
+         font-size: 1.9rem;
+         font-weight: 520;
      }
      tbody tr:nth-child(odd){
          background-color: #EDEFF7;
      }
      .header{
-         font-size: 2rem;
+         font-size: 3rem;
+         font-weight: 790;
      }
-     .sec8__div1__div2 h4{
-         padding-bottom: 1.2rem;
-     }
-     .sec8__div1__div1 h4{
-         padding-bottom: 1.2rem;
-     }
-     .sec8__div1__div2--body__divun{
-         padding-left: 1rem;
-         background-color: #EDEFF7;
-     }
-     .sec8__div1__div1__secondheader{
-         padding-left: 1rem;
-         background-color: #EDEFF7;
+     .sec8 h4{
+         padding: 1.6rem;
      }
      .header1{
-         font-size: 1.4rem;
+         font-size: 2.4rem;
          padding-bottom: 1rem;
      }
-     .sec8 ul{
-         padding-bottom: 1.2rem;
-     }
      .sec8 ul li{
-         padding: .7rem;
+         padding-left: 3.2rem;
+         font-size: 1.9rem;
+         font-weight: 500;  
      }
-}
-@media (max-width: 28rem){
-    body{
-        font-size: 55%;
-    }
-    .header {
-        font-size: .6rem;
-        font-weight: 400;
-    }
-    .header_links .btn{
-        margin-right: .5rem;
-    }
-    .btn:link, 
-    .btn:visited {
-        font-size: .7rem;
-        padding: .8rem 1.6rem;
-    }
-    a{
-        font-size: .3rem;
-        font-weight: 600;
-        padding-right: .1rem;
-        padding-left: .3rem;
-    }
-    .ls{
-          font-size: .5rem;
-    }
-    .heading1{
-        font-size: 1.3rem;
-        max-width: 15rem;
-        padding-bottom: 1.5rem;
-        padding-top: 1.4rem;
-    }
-    .sec2{
-        padding-top: .7rem;
-        padding-bottom: .7rem;
-    }
-    .secondrow{
-        margin-bottom: .6rem;
-    } 
-    .sec2-d1 h2{
-        font-size: 1.6rem;
-    }
-    .sec2-d1{
-        padding-right: .7rem;
-        padding-left: .7rem;
-        padding-bottom: 1rem;
-        font-size: .8rem;
-    }
-    .sec2-d2{
-        background-position: bottom;
-        padding-left: .5rem;
-        height: 20rem;
-    }
-    .sec4-shape{
-        width: 4.4rem;
-        height: 4.4rem;
-    }
-    .imgtest-d1{
-        margin-right: 3.5rem;
-    }
-    .imgtest-d2{
-        margin-right: 4.3rem;
-    }
-    .imgtest-d3{
-        margin-right: 3rem;
-    }
-    .trow-c2 h3{
-        font-size: 1.6rem;
-    }
-    .trow-c2 p{
-        font-size: .8rem;
-    }
-    .sec4-div3 p{
-        font-size: .8rem;
-    }
-    .para{
-        padding-top: 1rem;
-        padding-bottom: .5rem;
-    }
-    .sec4-div3{
-        padding-left: .5rem;
-        padding-right: .1rem;
-        padding-top: .8rem;
-    }
-    .sec4-div3 p{
-        margin-left: 5.1rem;
-    }
-    .thirdrow{
-        max-width: 100%;
-        padding-top: 1rem;
-    }
-    .trow-c1{
-        height: 20rem;
-        background-size: cover;
-        background-position: bottom;
-    }
-    .two p{
-        font-size: .8rem;
-        padding-top: .9rem;
-        padding-bottom: 0;
-        transform: translateY(-3.6rem);
-    }
-    .sec5-di3 p{
-        font-size: .8rem;
-        margin-left: 5.6rem;
-        transform: translateY(-4.5rem);
-    }
-    .sec5-di3{
-        padding-right: 1.5rem;
-        padding-bottom: 0;
-    }
-    .sec4-shape2{
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    .row-sec5{
-        padding: .2rem;
-    }
-    .col-4-of-2{
-        width: 100%;
-        float: none;
-        font-size: .8rem;
-        padding: 1.6rem;
-    }
-    .col-3-of-2{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        padding-top: 1.5rem;
-    }
-    .sec4{
-        max-width: 110rem;
-        margin: 0 auto;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 1rem;
-        }
-    .sec5a{
-        padding-bottom: 1rem;
-    }
-    .firstcol{
-            width: 100%;
-            float: left;
-            display: none;
-        }
-    .secondcol{
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-    .sec6{
-        margin-left: .8rem;
-        margin-right: .8rem;
-    }
-    .sec6-div{
-        padding-left: 1.4rem;
-        padding-right: 1rem;
-    }
-    .sec6 ul{
-        font-size: .8rem;
-        padding-top: 0;
-        padding-left: .5rem;
-        padding-bottom: 2.1rem;
-    }
-    .sec6 ul li{
-        padding-top: .8rem;
-    }
-    .downsec-header{
-        font-size: 1.7rem;
-    }
-    .last-header{
-        font-size: 2.1rem;
-    }
-    .lastone{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 1.5rem;
-    }
-    .mbu{
-        width: 100%;
-        margin-right: 0;
-        font-size: 1rem;
-        float: none;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        padding-top: 1rem;
-    }
-    .abuo{
-        padding-bottom: 2.9rem;
-    }
-    .sec7-d3{
-        padding-left: .1rem;
-        padding-right: .1rem;
-    }
-    .sec7-d3 p{
-        font-size: .8rem;
-        margin-left: 6rem;
-    }
-    .sec7-shape{
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    .sec7-shape2{
-        width: 4.5rem;
-        height: 4.5rem;
-    }
-    .fgcap{
-        font-size: 1.4rem;
-    }
-    .sec7-d6 p{
-        font-size: .8rem;
-        margin-left: 5rem;
-    }
-    .sec7-d6{
-        padding-top: 2rem; 
-        padding-left: 1rem;
-        padding-right: .9rem;
-        font-size: .8rem;
-        height: auto;
-        border-radius: 3rem;
-    }
-    .last-header{
-        font-size: 1.7rem;
-        padding-bottom: 1.5rem;
-    }
-    .last-row{
-        padding-left: .7rem;
-    }
-    .first-col{
-        padding-left: .5rem;
-        padding-bottom: 1.4rem;
-        padding-right: .5rem;
-    }
-    .second-col{
-        padding-left: .5rem;
-        padding-right: .5rem;
-        padding-bottom: 1.4rem;
-    }
-    th, td{
-        padding: .3rem;
-        font-size: .8rem;
-    }
-    .ul3{
-        font-size: .8rem;
-    }
-    .ul2{
-        font-size: .8rem;
-    }
-    h6{
-        padding-top: 1rem;
+     .btn:link, 
+     .btn:visited {
+        font-weight: 510;
+        font-size: 1.8rem;
     }
 }
-
 /*
 .trow-c1{
     background-image: url('img/landingpg1.png');
@@ -1263,7 +967,4 @@ tbody tr:nth-child(odd){
     transform: translateX(-.5rem);
     border: .2rem solid white;
 }
-/* FADING DESIGN FOR DIV MBU  *//*
-
-*/
 
