@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../Favorites"
+		},
+		{
+			"name": "Landing-page-project",
+			"path": ".."
+		},
+		{
+			"name": "Landing-page-project-1",
+			"path": "../../Landing-page-project-1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Landing-page-project"
+	}
+}

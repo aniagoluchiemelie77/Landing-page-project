@@ -1,2 +1,3 @@
 # Landing-page-project
-landing page
+This landing page is a static page website.
+
