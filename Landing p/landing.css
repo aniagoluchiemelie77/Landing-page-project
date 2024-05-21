@@ -14,20 +14,21 @@ html{
 .container{
     font-family: "inter", sans-serif;
     font-weight: 400;
-    line-height: 1.0;
+    line-height: 1.2;
     color: black;
     background-color: white;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    
+    overflow-x: hidden;
 }
 .navigation{ 
     display: flex;
     justify-content: space-between;
     padding: 1.9rem;
-    min-height: 14vh;
+    min-height: 10vh;
     margin-top: 0.5rem;
+    align-content: center;
 }
 .sec1{
     display: flex;
@@ -54,7 +55,7 @@ html{
     grid-template-rows: .6fr .6fr;
     column-gap: 1rem;
     border-radius: 2%;
-    margin-top: 1rem;
+    margin-top: 2.3rem;
     min-height: 60vh;
 } 
 .sec4{
@@ -197,6 +198,29 @@ html{
     0% { transform: translateX(0); }
     100% { transform: translatex(-94vw); }
   }
+.fade-in{
+    opacity: 0;
+    transition: opacity 990ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+}
+.from-left{
+    transform: translateX(-50%);
+}
+.from-right{
+    transform: translateX(50%);
+}
+.from-left,
+.from-right{
+    transition: opacity 800ms ease-in, transform 999ms ease-in;
+    opacity: 0;
+}
+.from-left.appear,
+.from-right.appear{
+     transform: translateX(0);
+     opacity: 1;
+}
 .btn:link, 
 .btn:visited {
     font-weight: 500;
@@ -247,6 +271,9 @@ a{
     font-size: 1.2rem;
     color: black;
     font-weight: 500;
+}
+.header__logo-box{
+    width: 9vw;
 }
 .header__links{
     width: 10vw;
@@ -346,6 +373,9 @@ a{
     padding-bottom: 1.6rem;
     padding-top: 1.7rem;
 }
+.sec3__picture img{
+    border-radius: 2rem;
+}
 .sec4__div3 div{
     display: inline;
 }
@@ -402,17 +432,6 @@ a{
 }
 .sec4__div3 div{
     padding-left: 1rem;
-}
-.sec4__div3__pic1{
-    width: 15%;
-}
-.sec4__div3__pic2{
-    width: 15%;
-}
-.sec4__div3__pic3{
-    width: 15%;
-}
-.sec4__div3__pic4{
     width: 15%;
 }
 .sec4__div1__secondcol__div3--picture{
@@ -732,12 +751,8 @@ tbody tr:nth-child(odd){
     }
     .navigation{ 
         padding: 0;
-        min-height: 20vh;
+        min-height: 10vh;
         column-gap: 2rem;
-        margin-top: 0;
-        min-height: 9vh;
-        margin-left: 1rem;
-        margin-right: 1rem;
         margin: 1rem;
         justify-content: space-around;
     }
@@ -758,7 +773,7 @@ tbody tr:nth-child(odd){
         padding: 1rem;
         column-gap: 1rem;
         row-gap: 1rem;
-        margin-top: 0;
+        margin-top: .7rem;
         min-height: 30vh;
         line-height: 1.5;
         margin-left: 1rem;
@@ -770,6 +785,7 @@ tbody tr:nth-child(odd){
         line-height: 1.5;
         margin-left: 1rem;
         margin-right: 1rem;
+        margin-top: .6rem;
     }
     .sec5{
         padding: 1.5rem;
@@ -777,8 +793,7 @@ tbody tr:nth-child(odd){
         grid-template-rows: repeat(2, min-content);
         min-height: 30vh;
         line-height: 1.5;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 1rem;
         row-gap: 1.5rem;
     }
     .sec6{
@@ -795,8 +810,7 @@ tbody tr:nth-child(odd){
         row-gap: 1rem;
         grid-template-rows: repeat(2, min-content);
         line-height: 1.5;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 1rem;
     }
     .sec8{
         padding: 0;
@@ -804,7 +818,7 @@ tbody tr:nth-child(odd){
         margin-right: 1rem;
         column-gap: 0;
         line-height: 1.5;
-        row-gap: 1rem;
+        row-gap: 1.7rem;
         grid-template-columns: 1fr;
         grid-template-rows:  repeat(4, min-content);
     }
@@ -880,7 +894,7 @@ tbody tr:nth-child(odd){
          grid-area: 4 / 1 / -1 / -1;
      }
      a{
-         font-size: 1.3rem;
+         font-size: 1.5rem;
          padding-left: .6rem;
      }
      .sec1__heading__header{
