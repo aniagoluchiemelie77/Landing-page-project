@@ -15,7 +15,8 @@ const pic1 = document.querySelector('.sec4__img');
 const pic2 = document.querySelector('.sec4__div3__pic2');
 const pic3 = document.querySelector('.sec4__div3__pic3');
 const pic4 = document.querySelector('.sec4__div3__pic4');
-const imgbox = document.getElementsByClassName('sec4__div3');
+let imgbox = document.getElementById('imagebox');
+let img = document.getElementById('img');
 const imagesArray = ["img/landingpg3.png", "img/landingpg4 (1).png", "img/landingpg5.png", "img/landingpg2.png"];
 
 //selection for fade in funcion and slide in function
@@ -46,16 +47,21 @@ sliders.forEach((slider) => {
 
 //function for changing screen image
 let width = screen.width;
-if ( width <= 900){
+if ( width <= 700){
     pic2.remove();
     pic3.remove();
     pic4.remove();
-    /*imgbox.style.animation = null;
-    imgbox.style.display = null;*/
-    const imageLoop = function (arr) {
-        for(let i; i < arr.length; i++) {
-        return arr[i];
-    }};
-    let imgLooping = imageLoop(imagesArray);
-    //pic1.src = imgLooping;
+    imgbox.classList.remove('sec4__div3');
+    let numImages = imagesArray.length;
+let i = 0; 
+
+setInterval(function() {
+  let src = imagesArray[i];
+  img.src = src;
+  i++;
+  if (i == numImages) {
+    i = 0;
+  }
+
+}, 4000); // Change every 2 seconds
 };
