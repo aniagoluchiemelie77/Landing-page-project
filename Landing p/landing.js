@@ -9,6 +9,8 @@ const sec5 = document.querySelector('.sec5');
 const sec6 = document.querySelector('.sec6');
 const sec7 = document.querySelector('.sec7');
 const sec8 = document.querySelector('.sec8');
+const divThree = document.getElementById('sec7__divthree');
+let thirdDiv = document.getElementById('sec7__thirddiv'); 
 
 //selecting images 
 const pic1 = document.querySelector('.sec4__img');
@@ -46,9 +48,12 @@ sliders.forEach((slider) => {
 })
 
 //function for changing screen image
+let heightDivThree = divThree.clientHeight;
+let thirdDivHeight = `${heightDivThree}px`;
 let width = screen.width;
-if ( width <= 700){
+if ( width <= 850){
     pic2.remove();
+    thirdDiv.style.minHeight = thirdDivHeight;
     pic3.remove();
     pic4.remove();
     imgbox.classList.remove('sec4__div3');
