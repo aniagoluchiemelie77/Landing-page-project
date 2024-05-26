@@ -32,7 +32,7 @@ ul, li{
     display: flex;
     justify-content: space-between;
     padding: 1.9rem;
-    min-height: 10vh;
+    min-height: min-content;
     margin-top: 0.5rem;
     align-content: center;
 }
@@ -41,7 +41,7 @@ ul, li{
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    height: 70vh;
+    height: 80vh;
 }
 .sec2{
     background-color: #1C1232;
@@ -279,17 +279,33 @@ ul, li{
 a{
     text-decoration: none;
     font-size: 1.2rem;
+    display: flex;
+    align-content: center;
     color: black;
     font-weight: 500;
+    padding: 1rem;
+}
+.btn__svg{
+    margin-left: .7rem;
+    transform: translateY(.4rem);
+}
+.nav__svg{
+    margin-right: .7rem;
 }
 .header__logo-box{
     width: 9vw;
 }
 .header__links{
-    width: 10vw;
+    width: 17vw;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
+.header__links a:hover{
+    background-color: #EDEFF7;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 .sec1__heading__header{
     font-size: 3.4rem;
@@ -738,14 +754,14 @@ tbody tr:nth-child(odd){
     }
     .navigation{ 
         padding: 0;
-        min-height: 10vh;
+        min-height: min-content;
         column-gap: 2rem;
         margin: 1rem;
         justify-content: space-around;
     }
     .sec1{
         padding: 1.5rem;
-        min-height: 85vh;
+        min-height: 84vh;
     }
     .sec2{
         padding: 1rem;
@@ -816,7 +832,7 @@ tbody tr:nth-child(odd){
         width: fit-content;
     }
     .header__links a{
-        padding-left: 1.5rem;
+        padding-left: 2rem;
     }
     .sec2__firstrow__div1{
         padding: .5rem;
@@ -902,6 +918,9 @@ tbody tr:nth-child(odd){
      .row-heading{
          font-size: 3rem;
          max-width: fit-content;
+     }
+     .sec3__firstrow__div1 img{
+        width: 100%;
      }
      .sec4__div1__secondcol__div3{
          padding: 2.5rem;

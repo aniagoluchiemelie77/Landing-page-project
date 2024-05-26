@@ -1,6 +1,7 @@
 'use strict';
 
 //selecting the various sections
+const nav = document.querySelector('.navigation');
 const sec1 = document.querySelector('.sec1');
 const sec2 = document.querySelector('.sec2');
 const sec3 = document.querySelector('.sec3');
