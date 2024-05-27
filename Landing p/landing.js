@@ -97,4 +97,4 @@ if (sec6Container.scrollIntoView){
     setTimeout(() => txtTypingEffect(sec6Header, sec6txt), 2000);
 };
 txtTypingEffect(sec2Header, sec2txt);
-setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 3000);
+setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 2000);
