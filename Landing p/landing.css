@@ -18,10 +18,11 @@ html{
     line-height: 1.4;
     color: black;
     background-color: white;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    position: relative;
 }
 .container  p,
 ul, li{
@@ -33,15 +34,19 @@ ul, li{
     justify-content: space-between;
     padding: 1.9rem;
     min-height: min-content;
-    margin-top: 0.5rem;
+    position: fixed;
+    z-index: 200;
     align-content: center;
+    width: 100%;
+    background-color: rgba(255,255,255,.95);
+    border-radius: 3rem;
 }
 .sec1{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-    height: 80vh;
+    height: 90vh;
 }
 .sec2{
     background-color: #1C1232;
@@ -204,6 +209,7 @@ ul, li{
     border-radius: 50%;
     margin-right: .5rem;
 }
+
 @keyframes scrolling {
     0% { transform: translateX(0); }
     100% { transform: translatex(-94vw); }
