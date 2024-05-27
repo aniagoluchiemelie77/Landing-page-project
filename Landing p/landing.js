@@ -93,13 +93,8 @@ function txtTypingEffect (elem, txt, i = 0){
     }
     setTimeout(() => txtTypingEffect(elem, txt, i + 1), 60)
 };
-if (sec2Container.scrollIntoView){
-    txtTypingEffect(sec2Header, sec2txt);
-};
-if (sec3Container.scrollIntoView){
-    setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 3000);
-};
 if (sec6Container.scrollIntoView){
     setTimeout(() => txtTypingEffect(sec6Header, sec6txt), 2000);
 };
-
+txtTypingEffect(sec2Header, sec2txt);
+setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 3000);
