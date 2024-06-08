@@ -404,6 +404,14 @@ a{
     border-radius: 1.5rem;
     cursor: pointer;
     transform: scale(1.1);
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 /*/ <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 300 to 700*/
@@ -569,7 +577,7 @@ a{
 }
 .sec4img img{
     height: 7.8rem;
-    margin-right: 3.5rem;
+    margin-right: 4rem;
 }
 .sec4__div3:hover .sec4img{
     animation-play-state: paused;
