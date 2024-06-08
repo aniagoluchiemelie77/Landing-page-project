@@ -58,30 +58,6 @@ sliders.forEach((slider) => {
     appearOnScroll.observe(slider);
 })
 
-//function for changing screen image
-let heightDivThree = divThree.clientHeight;
-let thirdDivHeight = `${heightDivThree}px`;
-let width = screen.width;
-if ( width <= 850){
-    pic2.remove();
-    thirdDiv.style.minHeight = thirdDivHeight;
-    pic3.remove();
-    pic4.remove();
-    imgbox.classList.remove('sec4__div3');
-    let numImages = imagesArray.length;
-let i = 0; 
-
-setInterval(function() {
-  let src = imagesArray[i];
-  img.src = src;
-  i++;
-  if (i == numImages) {
-    i = 0;
-  }
-
-}, 4000); // Change every 2 seconds
-};
-
 //typing effect
 function txtTypingEffect (elem, txt, i = 0){
     if(i === 0){
