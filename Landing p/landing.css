@@ -1,5 +1,5 @@
 :root {
---pfontsize: 1.25rem;
+--pfontsize: 1.5rem;
 --headerbigfontsize: 4.3rem;
 --headermediumfontsize: 3rem;
 --headersmallfontsize: 2.6rem;
@@ -14,7 +14,7 @@
 --figcaptiontranslatey: -50%;
 --ulpadding: 1rem;
 --lipadding: 1.2rem;
---spanfontweight: 800;
+--spanfontweight: 880;
 --spanpaddingtop: 1.3rem;
 --linksfontsize: 1.2rem;
 --buttonfontsize: 1.3rem;
@@ -95,6 +95,10 @@ ul, li{
     border-radius: 2%;
     margin-top: 2.3rem;
     min-height: 60vh;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
 } 
 .sec4{
     display: grid;
@@ -102,6 +106,10 @@ ul, li{
     grid-template-rows: repeat(3, min-content);
     border-radius: 2%;
     padding: var(--sectionpadding);
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
 }
 .sec5{
     padding: var(--sectionpadding);
@@ -169,7 +177,14 @@ ul, li{
     -o-border-radius: 2rem;
 }
 .sec3__firstrow__div2 a{
-    margin-top: .5rem;
+    margin-top: 0;
+}
+.sec4__div1-pre{
+    grid-area:  1 / 1 / 2 / 2;
+    padding: var(--divpaddinglow);;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 .sec4__div1{
     grid-area:  1 / 2 / 2 / -1;
@@ -179,7 +194,10 @@ ul, li{
     flex-wrap: nowrap;
 }
 .sec4__div2{
+    display: flex;
     grid-area:  2 / 1 / 3 / -1;
+    align-items: center;
+    justify-content: center;
 }
 .sec4__div3{
     grid-area:  3 / 1 / -1 / -1;
@@ -484,13 +502,12 @@ a{
     color: transparent;
     max-width: 55vw;
     font-weight: 700;
-    padding-bottom: 1rem;
 }
 .sec3__firstrow__div2 p{
     color: black;
     padding-top: 1.5rem;
     max-width: 55rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 .sec3__firstrow__div2 .paragraph__first{
     display: block;
@@ -506,6 +523,10 @@ a{
 }
 .sec3__picture img{
     border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 .sec4__div1__secondcol__div1{
     background-color: var(--backgroundimagedivstack1);
@@ -517,6 +538,10 @@ a{
     -moz-transform: scale(2rem);
     -ms-transform: scale(2rem);
     -o-transform: scale(2rem);
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
 }
 .sec4__div1__secondcol__div3--picture{
     position: relative;
@@ -533,6 +558,10 @@ a{
    -moz-transform: translateY(-1.9rem);
    -ms-transform: translateY(-1.9rem);
    -o-transform: translateY(-1.9rem);
+   -webkit-border-radius: 6rem;
+   -moz-border-radius: 6rem;
+   -ms-border-radius: 6rem;
+   -o-border-radius: 6rem;
 }
 .sec4__div1__secondcol__div3{
     z-index: 100;
@@ -544,11 +573,36 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 30vh;
+    min-height: 50vh;
+    border-radius: 2rem;
     -webkit-transform: translateY(-3.7rem);
     -moz-transform: translateY(-3.7rem);
     -ms-transform: translateY(-3.7rem);
     -o-transform: translateY(-3.7rem);
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.sec4__div1__secondcol__div3-pre{
+    z-index: 100;
+    background-image: var(--backgroundimagedivstack3);
+    border-radius: 2rem;
+    transform: translateY(-3.7rem);
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: fit-content;
+    -webkit-transform: translateY(-3.7rem);
+    -moz-transform: translateY(-3.7rem);
+    -ms-transform: translateY(-3.7rem);
+    -o-transform: translateY(-3.7rem);
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 .sec4__div1__secondcol__div3--paragraph{
     padding-left: 1rem;
@@ -573,11 +627,12 @@ a{
 .sec4img{
     display: inline-block;
     animation: 14s slide infinite linear;
-    -webkit-animation: 14s slide infinite linear;
+    -webkit-animation: 20s slide infinite linear;
     width: fit-content;
 }
 .sec4img img{
-    height: 8rem;
+    height: 9rem;
+    width: 17rem;
     margin-right: 5rem;
 }
 .sec4__div3:hover .sec4img{
@@ -589,7 +644,7 @@ a{
     top: 0;
     z-index: 100;
     width: 6rem;
-    height: 20vh;
+    height: 100%;
 }
 .sec4-imgbox::before{
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
@@ -684,7 +739,7 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 25vh;
+    min-height: 35vh;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
@@ -738,6 +793,14 @@ a{
     transform: scale(2rem);
     color: transparent;
     border-radius: 10rem;
+    -webkit-transform: scale(2rem);
+    -moz-transform: scale(2rem);
+    -ms-transform: scale(2rem);
+    -o-transform: scale(2rem);
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
 }
 .divtwo{
    margin: 0 2.5rem 0 2.5rem;
@@ -746,6 +809,10 @@ a{
    color: transparent;
    transform: translateY(-1.9rem);
    border-radius: 6rem;
+   -webkit-transform: translateY(-1.9rem);
+   -moz-transform: translateY(-1.9rem);
+   -ms-transform: translateY(-1.9rem);
+   -o-transform: translateY(-1.9rem);
 }
 .divthree{
     z-index: 100;
@@ -758,6 +825,14 @@ a{
     flex-direction: row;
     flex-wrap: nowrap;
     min-height: fit-content;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    -webkit-transform: translateY(-3.7rem);
+    -moz-transform: translateY(-3.7rem);
+    -ms-transform: translateY(-3.7rem);
+    -o-transform: translateY(-3.7rem);
 }
 .divthree__picture{
     overflow: hidden;
@@ -767,6 +842,10 @@ a{
     border-radius: 50%;
     position: relative;
     background-color: #1C1232;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .divthree p{
     padding-left: 1rem;
@@ -783,14 +862,30 @@ a{
     transform: scale(2rem);
     color: transparent;
     border-radius: 10rem;
+    -webkit-transform: scale(2rem);
+    -moz-transform: scale(2rem);
+    -ms-transform: scale(2rem);
+    -o-transform: scale(2rem);
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
 }
 .seconddiv{
-    margin: 0 2.5rem 0 2.5rem;
+   margin: 0 2.5rem 0 2.5rem;
    z-index: 50;
    background-color: var(--backgroundimagedivstack2);
    color: transparent;
    transform: translateY(-1.9rem);
    border-radius: 6rem;
+   -webkit-transform: translateY(-1.9rem);
+   -moz-transform: translateY(-1.9rem);
+   -ms-transform: translateY(-1.9rem);
+   -o-transform: translateY(-1.9rem);
+   -webkit-border-radius: 6rem;
+   -moz-border-radius: 6rem;
+   -ms-border-radius: 6rem;
+   -o-border-radius: 6rem;
 }
 .thirddiv{
     z-index: 100;
@@ -802,7 +897,15 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 42.9vh;
+    min-height: 60vh;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    -webkit-transform: translateY(-3.7rem);
+    -moz-transform: translateY(-3.7rem);
+    -ms-transform: translateY(-3.7rem);
+    -o-transform: translateY(-3.7rem);
 }
 .thirddiv p{
     padding-left: 1rem;
@@ -825,44 +928,106 @@ figcaption{
     opacity: 0;
     transition: all .7s;
     backface-visibility: hidden;
+    -webkit-transform: translate(var(--figcaptiontranslatex), 0);
+    -moz-transform: translate(var(--figcaptiontranslatex), 0);
+    -ms-transform: translate(var(--figcaptiontranslatex), 0);
+    -o-transform: translate(var(--figcaptiontranslatex), 0);
+    -webkit-backface-visibility: hidden;
 }
 .sec4__img{
     transform: scale(1);
 }
 .sec5__img{
     transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 .sec7__img1{
     transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 .thirddiv:hover figcaption{
     opacity: 1;
     transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -webkit-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -moz-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -ms-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -o-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    font-size: 2rem;
 }
 .sec4__div1__secondcol__div3:hover .sec4__img{
     transform: scale(.8);
     opacity: .3;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
 }
 .sec5__div1__div2__subdiv3:hover .sec5__img{
     transform: scale(.8);
     opacity: .3;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
 }
 .divthree:hover .sec7__img1{
     transform: scale(.8);
     opacity: .3;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+}
+.thirddiv:hover .sec7__img1{
+    transform: scale(.8);
+    opacity: .3;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
 }
 .divthree:hover figcaption{
     opacity: 1;
+    font-size: 1.3rem;
     transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -webkit-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -moz-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -ms-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -o-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
 }
 .sec5__div1__div2__subdiv3:hover figcaption{
     opacity: 1;
+    font-size: 1.3rem;
     transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -webkit-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -moz-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -ms-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -o-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
 }
 .sec4__div1__secondcol__div3:hover figcaption{
     opacity: 1;
+    font-size: 1.3rem;
     transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -webkit-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -moz-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -ms-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -o-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+}
+.sec4__div1__secondcol__div3-pre:hover figcaption{
+    opacity: 1;
+    font-size: 1.3rem;
+    transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -webkit-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -moz-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -ms-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
+    -o-transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
 }
 .thirddiv span{
     display: block;
@@ -943,7 +1108,7 @@ tbody tr:nth-child(odd){
 .border-gradient {
     border:  white 10px solid;
     border-image-slice: 1;
-    border-width: 2px;
+    border-width: 1px;
     border-top: 0;
     border-right: 0;
     border-bottom: 0;
@@ -957,7 +1122,7 @@ tbody tr:nth-child(odd){
         margin: 0;
     }
     .container p, ul, li{
-        font-size: 1.58rem;
+        font-size: 1.78rem;
         line-height: 1.5;
         font-weight: normal;
     }
@@ -994,7 +1159,7 @@ tbody tr:nth-child(odd){
         padding: 1rem;
         margin: .6rem 1rem 0 1rem;
         line-height: 1.5;
-        grid-template-rows: repeat(2, min-content) .8fr;
+        grid-template-rows: repeat(4, min-content);
     }
     .sec5{
         padding: 1.5rem;
@@ -1062,9 +1227,16 @@ tbody tr:nth-child(odd){
          padding: 1.8rem;
          grid-area: 2 / 1 / -1 / -1;
      }
+     .sec4__div1-pre{
+        grid-area: 1 / 1 / 2 / -1;
+        padding: 0;
+     }
      .sec4__div1{
          padding: 0;
-         grid-area: 1 / 1 / 2 / -1;
+         grid-area: 2 / 1 / 3 / -1;
+     }
+     .sec4__div2{
+        grid-area: 3 / 1 / 4 / -1;
      }
      .sec4__div2__header{
         font-size: 3rem;
@@ -1074,6 +1246,7 @@ tbody tr:nth-child(odd){
          padding: 0;
          display: flex;
          align-items: center;
+         grid-area: 4 / 1 / -1 / -1;
      }
      .sec5__div1__div1{
          row-gap: 0;
@@ -1142,6 +1315,11 @@ tbody tr:nth-child(odd){
          min-height: 20svh;
          display: unset;
      }
+     .sec4__div1__secondcol__div3-pre{
+        padding: 2.5rem;
+        min-height: fit-content;
+        display: unset;
+    }
      .sec4__div1__secondcol__div3--paragraph{
          max-width: 78vw;
      }
@@ -1329,7 +1507,7 @@ tbody tr:nth-child(odd){
         min-height: 6svh;
     }
     .container p, ul, li{
-        font-size: 1.9rem;
+        font-size: 2rem;
         line-height: 1.5;
         font-weight: normal;
         max-width: fit-content;
@@ -1444,9 +1622,19 @@ tbody tr:nth-child(odd){
         -ms-transform: translateY(-3.5rem);
         -o-transform: translateY(-3.5rem);
 }
+    .sec4__div1__secondcol__div3-pre{
+    padding: 2.5rem;
+    min-height: fit-content;
+    display: unset;
+    transform: translateY(-6rem);
+    -webkit-transform: translateY(-6rem);
+    -moz-transform: translateY(-6rem);
+    -ms-transform: translateY(-6rem);
+    -o-transform: translateY(-6rem);
+}
      .sec4__div1__secondcol__div3{
          padding: 2.5rem;
-         min-height: fit-content;
+         min-height: 43svh;
          display: unset;
          transform: translateY(-6rem);
          -webkit-transform: translateY(-6rem);
@@ -1512,11 +1700,19 @@ tbody tr:nth-child(odd){
      .sec5__div1__div2__subdiv1{
         margin: 0 5.5rem 0 5.5rem;
         transform: scale(1);
-     }
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
      .sec5__div1__div2__subdiv2{
         margin: 0 2.5rem 0 2.5rem;
         transform: translateY(-3.5rem);
-     }
+        -webkit-transform: translateY(-3.5rem);
+        -moz-transform: translateY(-3.5rem);
+        -ms-transform: translateY(-3.5rem);
+        -o-transform: translateY(-3.5rem);
+}
      .sec5__div1__div2__subdiv3{
          padding: 2.5rem;
          display: unset;
@@ -1531,6 +1727,9 @@ tbody tr:nth-child(odd){
      .sec5__div1__div2__subdiv3 p {
          padding-left: 1.7rem;
          max-width: 70vw;
+     }
+     .thirddiv{
+        min-height: 49svh;
      }
      .thirddiv__picture{
         width: 10rem;

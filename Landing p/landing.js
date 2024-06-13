@@ -32,9 +32,9 @@ const sec6Header = document.querySelector('.typingEffect5');
 const sec2Container = document.querySelector('.sec2__firstrow__div1');
 const sec6Container = document.querySelector('.sec6');
 const sec3Container = document.querySelector('.sec3');
-const sec6txt = "What I Can Do For You";
-const sec3txt = "I'm Diamaka, Your Veteran Cybersecurity Writer And Content Strategist";
-const sec2txt = 'Data Backed & Result-Driven Cybersecurity Content';
+const sec6txt = "What I Can Do for You";
+const sec3txt = "I'm Diamaka, Your Content Writer and Content Strategist With 5 Years of Hands-on Experience";
+const sec2txt = 'Data-Backed & Result-Driven Tech Content';
 
 //fade in and slide in functions
 const appearOptions = {
