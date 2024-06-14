@@ -1578,8 +1578,8 @@ tbody tr:nth-child(odd){
     .sec3{
         row-gap: 1rem;
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr min-content;
-        min-height: 45svh;
+        grid-template-rows: repeat(2, min-content);
+        min-height: fit-content;
     }
     .sec4{
         margin-bottom: .5rem;
@@ -1657,7 +1657,12 @@ tbody tr:nth-child(odd){
          max-width: fit-content;
      }
      .sec3__picture img{
-        height: auto;
+        height: 65rem;
+        width: 65rem;
+     }
+     .sec3__firstrow__div1 figure{
+        width: 100%;
+        height: 100%;
      }
      .sec4__div1{
         padding: 0;
