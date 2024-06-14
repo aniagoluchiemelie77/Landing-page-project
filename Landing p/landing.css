@@ -523,6 +523,8 @@ a{
 }
 .sec3__picture img{
     border-radius: 2rem;
+    height: 100%;
+    width: 100%;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
