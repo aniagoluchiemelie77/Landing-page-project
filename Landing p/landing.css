@@ -1312,16 +1312,32 @@ tbody tr:nth-child(odd){
      .sec3__firstrow__div1 img{
         width: 100%;
      }
+     .sec4__div1__secondcol__div2{
+        transform: translateY(-2.3rem);
+        -webkit-transform: translateY(-2.3rem);
+        -moz-transform: translateY(-2.3rem);
+        -ms-transform: translateY(-2.3rem);
+        -o-transform: translateY(-2.3rem);
+}
      .sec4__div1__secondcol__div3{
          padding: 2.5rem;
          min-height: 20svh;
          display: unset;
-     }
+         transform: translateY(-4.4rem);
+         -webkit-transform: translateY(-4.4rem);
+         -moz-transform: translateY(-4.4rem);
+         -ms-transform: translateY(-4.4rem);
+         -o-transform: translateY(-4.4rem);
+}
      .sec4__div1__secondcol__div3-pre{
         padding: 2.5rem;
-        min-height: fit-content;
         display: unset;
-    }
+        transform: translateY(-4.4rem);
+        -webkit-transform: translateY(-4.4rem);
+        -moz-transform: translateY(-4.4rem);
+        -ms-transform: translateY(-4.4rem);
+        -o-transform: translateY(-4.4rem);
+}
      .sec4__div1__secondcol__div3--paragraph{
          max-width: 78vw;
      }
@@ -1360,6 +1376,20 @@ tbody tr:nth-child(odd){
      .sec5__div1__subdiv1{
         display: none;
      }
+     .sec5__div1__div2__subdiv2 {
+        transform: translateY(-2.3rem);
+        -webkit-transform: translateY(-2.3rem);
+        -moz-transform: translateY(-2.3rem);
+        -ms-transform: translateY(-2.3rem);
+        -o-transform: translateY(-2.3rem);
+     }
+     .sec5__div1__div2__subdiv3{
+        transform: translateY(-4.4rem);
+        -webkit-transform: translateY(-4.4rem);
+        -moz-transform: translateY(-4.4rem);
+        -ms-transform: translateY(-4.4rem);
+        -o-transform: translateY(-4.4rem);
+}
      .sec5__div1__subdiv2 p{
          padding: 1rem;
          max-width: fit-content;
@@ -1398,10 +1428,22 @@ tbody tr:nth-child(odd){
      .sec6 ul li{
          padding-top: .8rem;
      }
+     .divtwo{
+        transform: translateY(-2.3rem);
+        -webkit-transform: translateY(-2.3rem);
+        -moz-transform: translateY(-2.3rem);
+        -ms-transform: translateY(-2.3rem);
+        -o-transform: translateY(-2.3rem);
+}
      .divthree{
          padding: 2rem;
          display: unset;
-     }
+         transform: translateY(-4.4rem);
+         -webkit-transform: translateY(-4.4rem);
+         -moz-transform: translateY(-4.4rem);
+         -ms-transform: translateY(-4.4rem);
+         -o-transform: translateY(-4.4rem);
+}
      .divthree__picture{
          width: 15rem;
          height: 15rem;
@@ -1427,10 +1469,22 @@ tbody tr:nth-child(odd){
          font-size: 2.3rem;
          padding-top: 2rem;
      }
+     .seconddiv{
+        transform: translateY(-2.3rem);
+        -webkit-transform: translateY(-2.3rem);
+        -moz-transform: translateY(-2.3rem);
+        -ms-transform: translateY(-2.3rem);
+        -o-transform: translateY(-2.3rem);
+}
      .thirddiv{
          padding: 2rem;
          display: unset;
-     }
+         transform: translateY(-4.4rem);
+         -webkit-transform: translateY(-4.4rem);
+         -moz-transform: translateY(-4.4rem);
+         -ms-transform: translateY(-4.4rem);
+         -o-transform: translateY(-4.4rem);
+}
      .thirddiv__picture{
         width: 15rem;
         height: 15rem;
