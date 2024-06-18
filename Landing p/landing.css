@@ -168,7 +168,7 @@ ul, li{
 }
 .sec3__firstrow__div2{
     grid-area:  1 / 2 / -1 / -1;
-    padding: 3.5rem;
+    padding: 2.5rem;
     background-color: #FAFAFA;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
@@ -375,6 +375,10 @@ ul, li{
     -moz-border-radius: 4rem;
     -ms-border-radius: 4rem;
     -o-border-radius: 4rem;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
 }
 .btn-blue::after{
     background-color: #8858F1;
@@ -523,8 +527,8 @@ a{
 }
 .sec3__picture img{
     border-radius: 2rem;
-    height: 100%;
-    width: 100%;
+    height: 75%;
+    width: 75%;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
@@ -1657,8 +1661,8 @@ tbody tr:nth-child(odd){
          max-width: fit-content;
      }
      .sec3__picture img{
-        height: 65rem;
-        width: 65rem;
+        height: 100%;
+        width: 95%;
      }
      .sec3__firstrow__div1 figure{
         width: 100%;
