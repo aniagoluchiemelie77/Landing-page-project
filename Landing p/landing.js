@@ -20,6 +20,7 @@ const pic4 = document.querySelector('.sec4__div3__pic4');
 let imgbox = document.getElementById('imagebox');
 let img = document.getElementById('img');
 const imagesArray = ["img/landingpg3.png", "img/landingpg4 (1).png", "img/landingpg5.png", "img/landingpg2.png"];
+let range = document.createRange();
 
 //selection for fade in funcion and slide in function
 const fadeIn = document.querySelectorAll('.fade-in');
@@ -33,7 +34,7 @@ const sec2Container = document.querySelector('.sec2__firstrow__div1');
 const sec6Container = document.querySelector('.sec6');
 const sec3Container = document.querySelector('.sec3');
 const sec6txt = "What I Can Do for You";
-const sec3txt = "I'm Diamaka, Your Content Writer and Content Strategist With 5 Years of Hands-on Experience";
+const sec3txt = "I'm Diamaka, Your Tech Content Writer and Content Strategist With 4 Years of Hands-on Experience";
 const sec2txt = 'Data-Backed & Result-Driven Tech Content';
 
 //fade in and slide in functions
