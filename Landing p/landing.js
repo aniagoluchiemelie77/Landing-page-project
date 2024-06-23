@@ -38,40 +38,67 @@ const sec3txt = "I'm Diamaka, Your Tech Content Writer and Content Strategist Wi
 const sec2txt = 'Data-Backed & Result-Driven Tech Content';
 
 //fade in and slide in functions
-const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -60px 0px",
-};
-const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
-    entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-            return;
-        } else{
-            entry.target.classList.add('appear');
-            appearOnScroll.unobserve(entry.target);
-        }
+const fadeInAndSlideInFunc = function () {
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -60px 0px",
+    };
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            } else{
+                entry.target.classList.add('appear');
+                appearOnScroll.unobserve(entry.target);
+            }
+        })
+    }, appearOptions);
+    fadeIn.forEach((fader) => {
+        appearOnScroll.observe(fader);
     })
-}, appearOptions);
-fadeIn.forEach((fader) => {
-    appearOnScroll.observe(fader);
-})
-sliders.forEach((slider) => {
-    appearOnScroll.observe(slider);
-})
+    sliders.forEach((slider) => {
+        appearOnScroll.observe(slider);
+    })
+};
+fadeInAndSlideInFunc();
 
 //typing effect
-function txtTypingEffect (elem, txt, i = 0){
-    if(i === 0){
-        elem.textContent = "";
-    }
-    elem.textContent += txt[i];
-    if (i == txt.length - 1){
-        return;
-    }
-    setTimeout(() => txtTypingEffect(elem, txt, i + 1), 60)
+const typingEffect = function (){
+    function txtTypingEffect (elem, txt, i = 0){
+        if(i === 0){
+            elem.textContent = "";
+        }
+        elem.textContent += txt[i];
+        if (i == txt.length - 1){
+            return;
+        }
+        setTimeout(() => txtTypingEffect(elem, txt, i + 1), 60)
+    };
+    if (sec6Container.scrollIntoView){
+        setTimeout(() => txtTypingEffect(sec6Header, sec6txt), 2000);
+    };
+    txtTypingEffect(sec2Header, sec2txt);
+    setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 2000);
 };
-if (sec6Container.scrollIntoView){
-    setTimeout(() => txtTypingEffect(sec6Header, sec6txt), 2000);
+typingEffect();
+
+//lazy loading
+const lazyLoading = function () {
+    const loadImg = function(entries, observer) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return
+        entry.target.src = entry.target.dataset.src;
+        entry.target.addEventListener('load', function () {
+            entry.target.classList.remove('lazy-img');
+        })
+        observer.unobserve(entry.target);
+    }
+    const imgObserver = new IntersectionObserver(loadImg, {
+        root: null,
+        threshold: 0,
+        rootMargin: '200px',
+    })
+    const imgTarget = document.querySelectorAll('img[data-src]')
+    imgTarget.forEach(img => imgObserver.observe(img));
 };
-txtTypingEffect(sec2Header, sec2txt);
-setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 2000);
+lazyLoading();

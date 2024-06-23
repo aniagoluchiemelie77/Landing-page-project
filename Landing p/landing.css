@@ -466,6 +466,10 @@ a{
     cursor: pointer;
     display: block;
   }
+  .lazy-img{
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
   .header__links button{
     display: flex;
     flex-wrap: nowrap;
