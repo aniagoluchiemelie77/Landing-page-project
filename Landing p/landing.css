@@ -50,6 +50,59 @@ html{
     overflow-x: hidden;
     position: relative;
 }
+/* For Content writing page*/
+body .content__body{
+    display: flex;
+    padding: var(--divpaddinghigh);
+    width: 100%;
+    min-height: fit-content;
+    flex-wrap: wrap;
+}
+.fullwidth{
+    width: 100%;
+}
+.content__body .content__body__container1{
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--divpaddinghigh);
+    border: 1px solid #222222;
+    transition: all .4s ease-in;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+}
+.content__body .content__body__container1:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, .3);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    background-color: hsla(0, 0%, 98%, 0.963);
+}
+.content__body .content__body__container1 .content__body__container1__div1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--divpaddinglow);
+    align-items: flex-start;
+    width: 100%;
+}
+.content__body .content__body__container1 h1{
+    padding: var(--divpaddinglow);
+}
+.content__body .content__body__container1 h2{
+    font-size: var(--headersmallfontsize);
+    margin-right: 1.2rem;
+}
+.center{
+    align-items: center;
+}
+.content__body__container1__div1 a{
+    margin-right: 1rem;
+}
 .container  p,
 ul, li{
     line-height: 1.4;
@@ -1187,6 +1240,9 @@ tbody tr:nth-child(odd){
         padding: 1.5rem;
         min-height: 84svh;
     }
+    .content__body__container1__div1 a{
+        margin: 1rem;
+    }
     .sec2{
         padding: 1rem;
         min-height: min-content;
@@ -1746,6 +1802,9 @@ tbody tr:nth-child(odd){
          padding-top: 2.3rem;
          font-size: 2rem;
      }
+     .content__body__container1__div1 a{
+        margin: 1rem;
+    }
      .sec4__div1__secondcol__div3--picture{
          width: 10rem;
          height: 10rem;
