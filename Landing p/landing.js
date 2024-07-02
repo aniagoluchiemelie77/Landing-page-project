@@ -1,6 +1,5 @@
 'use strict';
 //selecting the various sections
-const nav = document.querySelector('.navigation');
 const sec1 = document.querySelector('.sec1');
 const sec2 = document.querySelector('.sec2');
 const sec3 = document.querySelector('.sec3');
@@ -9,6 +8,7 @@ const sec5 = document.querySelector('.sec5');
 const sec6 = document.querySelector('.sec6');
 const sec7 = document.querySelector('.sec7');
 const sec8 = document.querySelector('.sec8');
+const header = document.querySelector('.navigation');
 const divThree = document.getElementById('sec7__divthree');
 let thirdDiv = document.getElementById('sec7__thirddiv'); 
 
@@ -102,3 +102,23 @@ const lazyLoading = function () {
     imgTarget.forEach(img => imgObserver.observe(img));
 };
 lazyLoading();
+
+const stickyNavFunc = function () {
+    const navHeight = header.getBoundingClientRect().height;
+    const stickyNav = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) {
+            header.classList.add('sticky');
+        }else{
+            header.classList.remove('sticky');
+        }
+    }
+    const headerObs = new IntersectionObserver(stickyNav, {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${navHeight}px`,
+    });
+    headerObs.observe(sec1);
+    
+};
+stickyNavFunc();

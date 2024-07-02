@@ -36,6 +36,14 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-behavior: cubic-bezier(0.2, 0, 0.38, 1);
+    position: relative;
+}
+.sticky{
+    position: fixed;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(20px);
+    top: 0;
 }
 
 @supports (display: flex) and (display: grid) {
@@ -57,40 +65,52 @@ html{
     width: 100%;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(108deg, white, #eee);
+    background-color: #1C1232;
     min-height: fit-content;
+    border-radius: 1rem;
+    margin: 0 1rem;
     flex-wrap: wrap;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 .fullwidth{
     width: 100%;
 }
 .content__body .content__body__container1{
     margin: 1.5rem;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40vw;
     padding: var(--divpaddinghigh);
-    border: 1px solid #222222;
+    border: 1.5px solid #866BF5;
     transition: all .4s ease-in;
     -webkit-transition: all .4s ease-in;
     -moz-transition: all .4s ease-in;
     -ms-transition: all .4s ease-in;
     -o-transition: all .4s ease-in;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 .content__body .content__body__container1:hover{
     transform: scale(1.03);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, .3);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .3);
     -webkit-transform: scale(1.03);
     -moz-transform: scale(1.03);
     -ms-transform: scale(1.03);
     -o-transform: scale(1.03);
-    background-color: hsla(0, 0%, 98%, 0.963);
 }
 .content__body .content__body__container1 .content__body__container1__div1{
     display: flex;
     flex-wrap: wrap;
     padding: var(--divpaddinglow);
     align-items: flex-start;
+    justify-content: center;
     width: 100%;
 }
 .content__body .content__body__container1 h1{
@@ -126,7 +146,6 @@ ul, li{
     min-height: fit-content;
     align-content: flex-start;
     width: 100%;
-    background-color: rgba(255,255,255,.95);
 }
 .sec1{
     display: flex;
@@ -501,7 +520,7 @@ a{
     padding: 1.5rem;
     font-size: var(--pfontsize);
     border: none;
-    background-color: #FAFAFA;
+    background: inherit;
   }
   .dropdownbtn:hover {
     background-color: #f1f1f1;
@@ -1253,6 +1272,18 @@ tbody tr:nth-child(odd){
     }
     .content__body__container1__div1 a{
         margin: 1rem;
+    }
+    /* Additional style for Content writing page*/
+    .content__body .content__body__container1 .content__body__container1__div1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .content__body .content__body__container1{
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
     }
     .sec2{
         padding: 1rem;
