@@ -50,11 +50,14 @@ html{
     overflow-x: hidden;
     position: relative;
 }
-/* For Content writing page*/
-body .content__body{
+/* Additional style for Content writing page*/
+ .content__body{
     display: flex;
     padding: var(--divpaddinghigh);
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(108deg, white, #eee);
     min-height: fit-content;
     flex-wrap: wrap;
 }
@@ -100,9 +103,17 @@ body .content__body{
 .center{
     align-items: center;
 }
+#contactbtn a{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#contactbtn a svg{
+    margin-left: 1rem;
+}
 .content__body__container1__div1 a{
     margin-right: 1rem;
-}
+}/* End of Content writing page*/
 .container  p,
 ul, li{
     line-height: 1.4;
