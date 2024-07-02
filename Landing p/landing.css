@@ -1260,11 +1260,11 @@ tbody tr:nth-child(odd){
         font-weight: normal;
     }
     .navigation{ 
-        padding: 0;
-        min-height: min-content;
+        padding: 1rem;
+        min-height: fit-content;
         column-gap: 2rem;
-        margin: 1rem;
         justify-content: space-around;
+        align-items: center;
     }
     .sec1{
         padding: 1.5rem;
