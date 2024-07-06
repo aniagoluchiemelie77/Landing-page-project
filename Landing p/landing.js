@@ -61,27 +61,6 @@ const fadeInAndSlideInFunc = function () {
     })
 };
 fadeInAndSlideInFunc();
-
-//typing effect
-const typingEffect = function (){
-    function txtTypingEffect (elem, txt, i = 0){
-        if(i === 0){
-            elem.textContent = "";
-        }
-        elem.textContent += txt[i];
-        if (i == txt.length - 1){
-            return;
-        }
-        setTimeout(() => txtTypingEffect(elem, txt, i + 1), 60)
-    };
-    if (sec6Container.scrollIntoView){
-        setTimeout(() => txtTypingEffect(sec6Header, sec6txt), 2000);
-    };
-    txtTypingEffect(sec2Header, sec2txt);
-    setTimeout(() => txtTypingEffect(sec3Header, sec3txt), 2000);
-};
-typingEffect();
-
 //lazy loading
 const lazyLoading = function () {
     const loadImg = function(entries, observer) {

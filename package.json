@@ -1,0 +1,17 @@
+{
+  "name": "landing-page-project-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aniagolu Chiemelie",
+  "license": "ISC",
+  "description": "A Landing Page designed for Diamaka",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0"
+  }
+}
