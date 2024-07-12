@@ -81,23 +81,3 @@ const lazyLoading = function () {
     imgTarget.forEach(img => imgObserver.observe(img));
 };
 lazyLoading();
-
-const stickyNavFunc = function () {
-    const navHeight = header.getBoundingClientRect().height;
-    const stickyNav = function (entries) {
-        const [entry] = entries;
-        if (!entry.isIntersecting) {
-            header.classList.add('sticky');
-        }else{
-            header.classList.remove('sticky');
-        }
-    }
-    const headerObs = new IntersectionObserver(stickyNav, {
-        root: null,
-        threshold: 0,
-        rootMargin: `-${navHeight}px`,
-    });
-    headerObs.observe(sec1);
-    
-};
-stickyNavFunc();

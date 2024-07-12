@@ -37,13 +37,6 @@ html{
     scroll-behavior: cubic-bezier(0.2, 0, 0.38, 1);
     position: relative;
 }
-.sticky{
-    position: fixed;
-    z-index: 200;
-    background-color: rgba(255, 255, 255, .9);
-    backdrop-filter: blur(20px);
-    top: 0;
-}
 @supports (display: flex) and (display: grid) {
 .container{
     line-height: 1.4;
@@ -141,9 +134,9 @@ ul, li{
 .navigation{ 
     display: flex;
     justify-content: space-between;
-    padding: var(--sectionpadding);
+    padding: 0 var(--sectionpadding) var(--sectionpadding) var(--sectionpadding);
     min-height: fit-content;
-    align-content: flex-start;
+    align-items: center;
     width: 100%;
 }
 .sec1{
@@ -325,7 +318,6 @@ ul, li{
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
 }
-
 .sec8__div1__div2{
     grid-area: 2 / 3 / 4 / -1;
     padding: var(--divpaddinghighest);
@@ -356,7 +348,6 @@ ul, li{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-
 @keyframes slide {
     0% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); -ms-transform: translateX(0%); -o-transform: translateX(0%); }
     100% { transform: translateX(-100%); -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); }
@@ -500,7 +491,12 @@ a{
     margin-right: .7rem;
 }
 .header__logo-box{
-    width: 9vw;
+    width: 15vw;
+    height: auto;
+}
+.header__logo-box img{
+    width: 100%;
+    height: 100%;
 }
 .header__links{
     font-size: var(--pfontsize);
@@ -759,7 +755,7 @@ a{
 .sec4img{
     display: inline-block;
     animation: 14s slide infinite linear;
-    -webkit-animation: 20s slide infinite linear;
+    -webkit-animation: 14s slide infinite linear;
     width: fit-content;
 }
 .sec4img img{
@@ -1029,7 +1025,7 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    min-height: 60vh;
+    min-height: 53.8vh;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
@@ -1083,7 +1079,6 @@ figcaption{
     -ms-transform: scale(1);
     -o-transform: scale(1);
 }
-
 .thirddiv:hover figcaption{
     opacity: 1;
     transform: translate(var(--figcaptiontranslatex), var(--figcaptiontranslatey));
@@ -1245,7 +1240,7 @@ tbody tr:nth-child(odd){
     border-right: 0;
     border-bottom: 0;
   }
-@media only screen and (max-width: 40rem){
+@media only screen and (max-width: 35rem){
     body{
         padding: 0;
     }
@@ -1261,13 +1256,14 @@ tbody tr:nth-child(odd){
     .navigation{ 
         padding: 1rem;
         min-height: fit-content;
-        column-gap: 2rem;
-        justify-content: space-around;
+        column-gap: 0;
+        justify-content: space-evenly;
         align-items: center;
+        flex-direction: column;
     }
     .sec1{
-        padding: 1.5rem;
-        min-height: 84svh;
+        padding: 0 1.5rem;
+        min-height: 40svh;
     }
     .content__body__container1__div1 a{
         margin: 1rem;
@@ -1420,6 +1416,10 @@ tbody tr:nth-child(odd){
          padding: 1.9rem;
          grid-area: 4 / 1 / -1 / -1;
      }
+     .header__logo-box{
+        width: 50vw;
+        height: auto;
+    }
      a{
          font-size: 1.4rem;
          padding-left: .6rem;
@@ -1500,7 +1500,6 @@ tbody tr:nth-child(odd){
          -ms-transition: translateX(-3rem);
          -o-transition: translateX(-3rem);
 }
-     
      .sec4-imgbox > div{
         width: fit-content;
         margin-right: 1rem;
@@ -1699,9 +1698,11 @@ tbody tr:nth-child(odd){
 @media only screen and (min-width: 41rem) and (max-width: 64rem) {
     .navigation{ 
         min-height: 6svh;
+        align-items: center;
+        padding: .6rem 1rem;
     }
-    .container p, ul, li{
-        font-size: 2rem;
+    .container p, ul, li, span{
+        font-size: 2.2rem;
         line-height: 1.5;
         font-weight: normal;
         max-width: fit-content;
@@ -1716,6 +1717,8 @@ tbody tr:nth-child(odd){
     }
     .sec3{
         min-height: fit-content;
+        align-items: center;
+        row-gap: 1.2rem;
         flex-direction: column;
     }
     .sec4{
@@ -1759,12 +1762,20 @@ tbody tr:nth-child(odd){
          padding: 1.9rem;
          grid-area: 4 / 1 / -1 / -1;
      }
+     .header__logo-box {
+        width: 20vw;
+    }
+    .sec1__heading__header .span {
+        font-size: 4.3rem;
+        font-weight: 750;
+    }
      a{
-         font-size: 1.5rem;
+         font-size: 2.2rem;
          padding-left: 1.5rem;
      }
      .sec1__heading__header{
          font-size: 4.3rem;
+         font-weight: 750;
          max-width: 70vw;
          line-height: 1.5;
      }
@@ -1819,20 +1830,20 @@ tbody tr:nth-child(odd){
         min-height: fit-content;
         display: unset;
         transform: translateY(-6rem);
-        -webkit-transform: translateY(-6rem);
+        -webkit-transform: translateY(-6.3rem);
         -moz-transform: translateY(-6rem);
         -ms-transform: translateY(-6rem);
         -o-transform: translateY(-6rem);
 }
      .sec4__div1__secondcol__div3{
          padding: 2.5rem;
-         min-height: 43svh;
+         min-height: 47svh;
          display: unset;
-         transform: translateY(-6rem);
-         -webkit-transform: translateY(-6rem);
-         -moz-transform: translateY(-6rem);
-         -ms-transform: translateY(-6rem);
-         -o-transform: translateY(-6rem);
+         transform: translateY(-6.3rem);
+         -webkit-transform: translateY(-6.3rem);
+         -moz-transform: translateY(-6.3rem);
+         -ms-transform: translateY(-6.3rem);
+         -o-transform: translateY(-6.3rem);
 }
      .sec4__div1__secondcol__div3--paragraph{
          padding-left: 1rem;
@@ -1841,7 +1852,7 @@ tbody tr:nth-child(odd){
      .sec4__div1__secondcol__div3--paragraph span{
          font-weight: 850;
          padding-top: 2.3rem;
-         font-size: 2rem;
+         font-size: 2.2rem;
      }
      .content__body__container1__div1 a{
         margin: 1rem;
@@ -1913,11 +1924,15 @@ tbody tr:nth-child(odd){
         display: unset;
         transform: translateY(-6rem);
         min-height: fit-content;
-     }
+        -webkit-transform: translateY(-6rem);
+        -moz-transform: translateY(-6rem);
+        -ms-transform: translateY(-6rem);
+        -o-transform: translateY(-6rem);
+}
      .sec5__div1__div2__subdiv3 span{
         font-weight: 850;
         padding-top: 2.3rem;
-        font-size: 2rem;
+        font-size: 2.2rem;
      }
      .sec5__div1__div2__subdiv3 p {
         padding-left: 1.7rem;
@@ -1934,8 +1949,14 @@ tbody tr:nth-child(odd){
         align-items: flex-start;
     }
     /* End of Content writing page*/
+    .sec4__div1__secondcol__div3-pre{
+        min-height: 41.5svh;
+    }
+    .divthree{
+        min-height: 45svh;
+    }
      .thirddiv{
-        min-height: 49svh;
+        min-height: 45svh;
      }
      .thirddiv__picture{
         width: 10rem;
@@ -1948,7 +1969,11 @@ tbody tr:nth-child(odd){
         clip-path: circle(50% at 50% 50%);
         transition: translateX(-3rem);
         position: relative;
-     }
+        -webkit-transition: translateX(-3rem);
+        -moz-transition: translateX(-3rem);
+        -ms-transition: translateX(-3rem);
+        -o-transition: translateX(-3rem);
+}
      .sec6__div{
         padding: 1.5rem;
         max-width: 89vw;
@@ -1967,17 +1992,29 @@ tbody tr:nth-child(odd){
      .divone{
         margin: 0 5.5rem 0 5.5rem;
         transform: scale(1);
-     }
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
      .divtwo{
         margin: 0 2.5rem 0 2.5rem;
         transform: translateY(-3.5rem);
-     }
+        -webkit-transform: translateY(-3.5rem);
+        -moz-transform: translateY(-3.5rem);
+        -ms-transform: translateY(-3.5rem);
+        -o-transform: translateY(-3.5rem);
+}
      .divthree{
         padding: 2.5rem;
         display: unset;
-        transform: translateY(-6rem);
+        transform: translateY(-6.3rem);
         min-height: fit-content;
-     }
+        -webkit-transform: translateY(-6.3rem);
+        -moz-transform: translateY(-6.3rem);
+        -ms-transform: translateY(-6.3rem);
+        -o-transform: translateY(-6.3rem);
+}
      .divthree__picture{
         width: 10rem;
         height: 10rem;
@@ -1989,28 +2026,45 @@ tbody tr:nth-child(odd){
         clip-path: circle(50% at 50% 50%);
         transition: translateX(-3rem);
         position: relative;
-     }
+        -webkit-transition: translateX(-3rem);
+        -moz-transition: translateX(-3rem);
+        -ms-transition: translateX(-3rem);
+        -o-transition: translateX(-3rem);
+}
      .divthree span{
          font-weight: 850;
-         font-size: 2rem;
+         font-size: 2.2rem;
          padding-top: 2.3rem;
      }
      .firstdiv{
         margin: 0 5.5rem 0 5.5rem;
         transform: scale(1);
-     }
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
      .seconddiv{
         margin: 0 2.5rem 0 2.5rem;
         transform: translateY(-3.5rem);
-     }
+        -webkit-transform: translateY(-3.5rem);
+        -moz-transform: translateY(-3.5rem);
+        -ms-transform: translateY(-3.5rem);
+        -o-transform: translateY(-3.5rem);
+}
      .thirddiv{
         padding: 2.5rem;
         display: unset;
-        transform: translateY(-6rem);
-     }
+        min-height: 53.5svh;
+        transform: translateY(-6.3rem);
+        -webkit-transform: translateY(-6.3rem);
+        -moz-transform: translateY(-6.3rem);
+        -ms-transform: translateY(-6.3rem);
+        -o-transform: translateY(-6.3rem);
+}
      .thirddiv span{
         font-weight: 850;
-        font-size: 2rem;
+        font-size: 2.2rem;
         padding-top: 2.3rem;
      }
      table{
@@ -2018,12 +2072,12 @@ tbody tr:nth-child(odd){
      }
      th{
         padding: 1rem;
-        font-size: 1.9rem;
+        font-size: 2.5rem;
         font-weight: 600;
      }
      td{
         padding: 1rem;
-        font-size: 1.9rem;
+        font-size: 2.2rem;
         font-weight: 500;
     }
      tbody tr:nth-child(odd){
@@ -2049,7 +2103,12 @@ tbody tr:nth-child(odd){
      .btn:link, 
      .btn:visited {
         font-weight: 510;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        padding: 1.4rem 1.6rem;
+    }
+    .dropdownbtn {
+        padding: 1rem;
+        font-size: 2.2rem;
     }
 }
 }
