@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' Landing p/landing.css",
+    "compress:css": "node css/landing.css css/index.css --output-style compressed",
+    "build:css": "npm-run-all prefix:css compress:css"
   },
   "keywords": [],
   "author": "Aniagolu Chiemelie",
