@@ -1,0 +1,6 @@
+ErrorDocument 404 /404page.html
+# enable mod_rewrite
+RewriteEngine On
+RewriteRule ^Home?$ index.html
+RewriteRule ^contentwriting?$ contentwriting.html
+RewriteRule ^contentstrategy?$ contentstrategy.html
